@@ -1,0 +1,32 @@
+<h1>Créer un nouveau jeu</h1>
+<form action="/jeux" method="POST">
+  <label for="titre">Titre :</label>
+  <input type="text" name="titre" id="titre" required />
+
+  <label for="description">Description :</label>
+  <textarea name="description" id="description" required></textarea>
+
+  <label for="dateSortie">Date de sortie :</label>
+  <input type="date" name="dateSortie" id="dateSortie" required />
+
+  <label for="genreId">Genre :</label>
+  <select name="genreId" id="genreId">
+    {{#each genres}}
+    <option value="{{this.id}}">{{this.nom}}</option>
+    {{/each}}
+  </select>
+
+  <label for="editeurId">Éditeur :</label>
+  <select name="editeurId" id="editeurId">
+    {{#each editeurs}}
+    <option value="{{this.id}}">{{this.nom}}</option>
+    {{/each}}
+  </select>
+
+  <label for="misEnAvant">Mis en avant :</label>
+  <input type="checkbox" name="misEnAvant" id="misEnAvant" />
+
+  <button type="submit">Créer</button>
+</form>
+
+<a href="/jeux" class="btn">Retourner à la liste de jeux</a>

@@ -1,0 +1,16 @@
+<h1>Liste des Editeurs</h1>
+
+<ul>
+  {{#each editeurs}}
+    <li>
+      <a href="/editeurs/{{id}}/jeux">{{nom}}</a> 
+      <a href="/editeurs/{{id}}/edit">Modifier</a>  
+      <form action="/editeurs/{{id}}/delete" method="POST" style="display:inline;">
+        <button type="submit">Supprimer</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+
+<a href="/editeurs/new">Créer un nouvel editeur</a>
+<a href="/" class="btn">Retourner à l'accueil</a>

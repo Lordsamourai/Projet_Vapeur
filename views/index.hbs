@@ -1,0 +1,24 @@
+<!-- header.hbs -->
+{{> header}}
+
+<h1>Jeux mis en avant</h1>
+{{#if jeuxMisEnAvant.length}}
+<ul>
+  {{#each jeuxMisEnAvant}}
+  <li>
+    <h2>{{this.titre}}</h2>
+    <p>{{this.description}}</p>
+    <p><strong>Date de sortie :</strong> {{this.dateSortie}}</p>
+  </li>
+  {{/each}}
+</ul>
+{{else}}
+<p>Aucun jeu mis en avant pour le moment.</p>
+{{/if}}
+
+<a href="/jeux">Voir tous les jeux</a>
+<a href="/genres">Voir tous les genres</a>
+<a href="/editeurs">Voir tous les editeurs</a>
+
+<!-- footer.hbs -->
+{{> footer}}

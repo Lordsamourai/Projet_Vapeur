@@ -1,0 +1,13 @@
+<h1>Jeux de l'editeur : {{editeur.nom}}</h1>
+
+<ul>
+  {{#each editeur.jeux}}
+    <li>
+      <strong>{{titre}}</strong> - {{description}}
+    </li>
+  {{else}}
+    <li>Aucun jeu trouvé pour cet editeur.</li>
+  {{/each}}
+</ul>
+
+<a href="/editeurs">Retour à la liste des editeurs</a>

@@ -1,0 +1,9 @@
+<h1>Modifier le genre : {{genre.nom}}</h1>
+
+<form action="/genres/{{genre.id}}/edit" method="POST">
+  <label for="nom">Nom du genre :</label>
+  <input type="text" name="nom" value="{{genre.nom}}" required />
+  <button type="submit">Modifier</button>
+</form>
+
+<a href="/genres">Retour à la liste des genres</a>

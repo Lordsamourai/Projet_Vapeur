@@ -1,0 +1,17 @@
+<h1>Liste des Genres</h1>
+
+<ul>
+  {{#each genres}}
+    <li>
+      <a href="/genres/{{id}}/jeux">{{nom}}</a> | 
+      <a href="/genres/{{id}}/edit">Modifier</a>  
+      {{!-- <form action="/genres/{{id}}/delete" method="POST" style="display:inline;">
+        <button type="submit">Supprimer</button>
+      </form> --}}
+    </li>
+  {{/each}}
+</ul>
+
+<a href="/genres/new">Créer un nouveau genre</a>
+<a href="/" class="btn">Retourner à l'accueil</a>
+
